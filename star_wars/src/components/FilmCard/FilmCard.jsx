@@ -11,14 +11,16 @@ export default function FilmCard({film,favorites,setFavorites}){
          favoriteArr.push(filmTilte);
       } else {
          favoriteArr = favorites.filter((favorite)=>favorite!==filmTilte)
+         console.log(favoriteArr)
       }
       setFavorites([...favoriteArr]);
-      localStorage.setItem("favorites",JSON.stringify(favorites));
+      localStorage.setItem("favorites",JSON.stringify([...favoriteArr]));
+
    }
  return(
     <div className="film_container">
-       <div>{film["title"]}</div>
-       <div>
+       <div className="title">{film["title"]}</div>
+       <div className="details">
           <div className="title">{film["title"]}</div>
           <div className="abstract">{film["opening_crawl"]}</div>
           {
