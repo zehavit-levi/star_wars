@@ -17,7 +17,11 @@ export default function FilmsList(props){
     filmsList = films.map((film, index) => <FilmCard key={index} film={film} favorites={favorites} setFavorites={setFavorites} />)
 
     return (
-        <div className="row align-items-center">
+        <div className="filmlist_container" >
+            <div className="table_titles">
+                <h3>Name:</h3>
+                <h4>Details:</h4>
+            </div>
             {filmsList}
         </div>
     )
