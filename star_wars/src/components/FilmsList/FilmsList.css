@@ -1,0 +1,14 @@
+.filmlist_container{
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+}
+.filmlist_container> .table_titles{
+    display: flex;
+}
+.filmlist_container> .table_titles > h3{
+    width: 30%;
+}
+.filmlist_container> .table_titles > h4{
+    width: 70%;
+}
