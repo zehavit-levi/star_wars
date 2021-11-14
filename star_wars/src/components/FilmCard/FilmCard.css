@@ -1,22 +1,14 @@
-.film_container{
-    display: flex;
-    margin-bottom: 2px;
-    text-align: center;
+.details{
+    padding: 5px;
 }
-
-.film_container>.title{
-    font-size: 1.5rem;
-    margin-right: 10px;
-    width: 30%;
-    border: 1px solid white;
-    padding: 2px;
-}
-.film_container>.details{
-    width: 70%;
-    border: 1px solid white;
-    padding: 2px;
-}
-.film_container>.details >.title{
+.details >.title{
     font-size: 1.2rem;
     font-weight: bold;
+    padding-bottom: 3px;
+}
+.details>.abstract{
+    line-height: 2em;
+}
+.details>.hearticon:hover{
+    cursor: pointer;
 }
