@@ -30,7 +30,7 @@ export default function FilmsList(props){
                 {filmsList}
                 </div>
                 <div className="filmcard_container">
-                    {chosenFilm!==null? <FilmCard film={chosenFilm} favorites={favorites} setFavorites={setFavorites}/>:<></>}
+                    {chosenFilm!==null? <FilmCard film={chosenFilm} favorites={favorites} setFavorites={setFavorites}/>:<>Please Chose a film to see it details</>}
                 </div>
             </div>
         </div>

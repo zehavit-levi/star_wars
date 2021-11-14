@@ -19,6 +19,7 @@ export default function FilmCard({film,favorites,setFavorites}){
       <div className="details">
          <div className="title">{film["title"]}</div>
          <div className="abstract">{film["opening_crawl"]}</div>
+         <div className="heart_container">
           {
              favorites.includes(film["title"]) ? 
              <BsSuitHeartFill className="hearticon"  onClick={()=>updateFav(film["title"])} style={{color:'red'}}/>
@@ -26,6 +27,7 @@ export default function FilmCard({film,favorites,setFavorites}){
             <BsSuitHeart className="hearticon" onClick={()=>updateFav(film["title"])} style={{color:'red'}}/> 
              
           }
+          </div>
       </div>
    )
 }

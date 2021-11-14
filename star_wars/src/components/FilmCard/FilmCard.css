@@ -1,15 +1,19 @@
 .details{
-    padding: 5px;
+    /* padding: 5px; */
 }
 .details >.title{
     font-size: 1.2rem;
     font-weight: bold;
     padding-bottom: 3px;
+    font-style: italic;
 }
-.details>.abstract{
-    line-height: 2em;
+.details>.heart_container{
+    text-align: center;
 }
-.details>.hearticon:hover{
+.details>.heart_container>.hearticon{
+    padding: 1em;
+}
+.details>.heart_container>.hearticon:hover{
     cursor: pointer;
 }
 
@@ -19,5 +23,15 @@
     } 
     .details{
         padding: 2px;
+    }
+}
+@media only screen and (min-width:600px){
+    .details>.abstract{
+        line-height: 2em;
+        max-width: 20em;
+        font-size: 1.2em;
+    }
+    .details >.title{
+        font-size: 1.4em;
     }
 }
