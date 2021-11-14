@@ -16,9 +16,10 @@ function App() {
         setResults(responseData.results);
       }
       fetchData();
-  })
+  },[])
   return (
     <div className="App">
+      <h1 className="app_title">Star Wars Movies</h1>
       {results!=null ?
      <FilmsList filmsList={results}/>:
      <></>}
