@@ -29,3 +29,10 @@
 .filmlist_container>.table_content>.title>.titlerow:active{
     color: burlywood;
 }
+@media only screen and (max-width: 600px) {
+    .filmlist_container>.table_content>.title{
+        font-size:1rem;  
+        padding: 1px;
+        margin-right: 3px;
+    }
+}

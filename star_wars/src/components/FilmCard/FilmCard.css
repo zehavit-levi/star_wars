@@ -12,3 +12,12 @@
 .details>.hearticon:hover{
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .details>.abstract{
+        line-height: 1.2em;
+    } 
+    .details{
+        padding: 2px;
+    }
+}

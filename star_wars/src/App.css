@@ -18,3 +18,9 @@
   font-family: 'Amatic SC', cursive;
   font-size: 5rem;
 }
+@media only screen and (max-width: 600px) {
+  .App>.app_title{
+    padding-top: 10px;
+    font-size: 2rem;
+  }
+}
