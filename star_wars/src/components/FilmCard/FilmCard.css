@@ -10,11 +10,19 @@
 .details>.heart_container{
     text-align: center;
 }
-.details>.heart_container>.hearticon{
+/* .details>.heart_container>.hearticon{
     padding: 1em;
 }
 .details>.heart_container>.hearticon:hover{
     cursor: pointer;
+} */
+.heart {
+	font-size: 1.5em;
+	animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+@keyframes beat{
+	to { transform: scale(1.4); }
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,6 +1,6 @@
 import './FilmCard.css';
 import React  from 'react';
-import { BsSuitHeartFill,  BsSuitHeart} from 'react-icons/bs';
+// import { BsSuitHeartFill,  BsSuitHeart} from 'react-icons/bs';
 
 export default function FilmCard({film,favorites,setFavorites}){
    const updateFav = (filmTilte)=> {
@@ -20,12 +20,16 @@ export default function FilmCard({film,favorites,setFavorites}){
          <div className="title">{film["title"]}</div>
          <div className="abstract">{film["opening_crawl"]}</div>
          <div className="heart_container">
-          {
+          {/* {
              favorites.includes(film["title"]) ? 
              <BsSuitHeartFill className="hearticon"  onClick={()=>updateFav(film["title"])} style={{color:'red'}}/>
              :
             <BsSuitHeart className="hearticon" onClick={()=>updateFav(film["title"])} style={{color:'red'}}/> 
              
+          } */}
+          {
+             favorites.includes(film["title"]) ? <div className="heart" onClick={()=>updateFav(film["title"])} style={{color:'red'}}>&#x2665;</div> : 
+          <div className="heart" onClick={()=>updateFav(film["title"])}>&#x2665;</div>
           }
           </div>
       </div>
