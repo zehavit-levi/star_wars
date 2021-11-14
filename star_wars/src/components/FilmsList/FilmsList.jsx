@@ -6,15 +6,18 @@ export default function FilmsList(props){
     let filmsList;
     let films = props.filmsList;
     const [favorites, setFavorites] = useState([]);
- 
+    const [chosenFilm, setChosenFilm] = useState(null);
     
     useEffect(()=>{
         const getArray = JSON.parse(localStorage.getItem('favorites') || '0');
         if(getArray !== 0) setFavorites([...getArray]);
     },[]);
    
+    function handleChosenFilm(e,film){
+        setChosenFilm(film);
+    }
 
-    filmsList = films.map((film, index) => <FilmCard key={index} film={film} favorites={favorites} setFavorites={setFavorites} />)
+    filmsList = films.map((film, index) => <div className="titlerow" key={index} onClick={(e) => handleChosenFilm(e,film)} >{film.title}</div>)
 
     return (
         <div className="filmlist_container" >
@@ -22,7 +25,14 @@ export default function FilmsList(props){
                 <h3>Name:</h3>
                 <h4>Details:</h4>
             </div>
-            {filmsList}
+            <div className="table_content">
+                <div className="title">
+                {filmsList}
+                </div>
+                <div className="filmcard_container">
+                    {chosenFilm!==null? <FilmCard film={chosenFilm} favorites={favorites} setFavorites={setFavorites}/>:<></>}
+                </div>
+            </div>
         </div>
     )
 }
